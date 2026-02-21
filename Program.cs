@@ -138,29 +138,98 @@ namespace ConsoleApp1
             //a) What does static mean?
 
             //TotalOrders belongs to the class itself, not to objects.
-            
+
             //Shared between all objects.
-            
+
             //Only one copy exists.
-            
+
             //Item is:
-            
+
             //Instance field.
-            
+
             //Each object has its own copy.
-            
+
             //b) Can static method access Item directly?
-            
+
             //❌ No.
-            
+
             //Because:
-            
+
             //Item belongs to an object.
-            
+
             //Static method belongs to the class.
-            
+
             //Static methods cannot access instance members directly
-           #endregion
-    }
+            #endregion
+
+            #region Part-02
+            //Console.WriteLine("========== Ticket Booking ==========");
+
+            //Cinema cinema = new Cinema();
+
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    Console.WriteLine($"\nEnter data for Ticket {i + 1}:");
+
+            //    Console.Write("Movie Name: ");
+            //    string movieName = Console.ReadLine();
+
+            //    Console.Write("Ticket Type (0=Standard, 1=VIP, 2=IMAX): ");
+            //    TicketType type = (TicketType)int.Parse(Console.ReadLine());
+
+            //    Console.Write("Seat Row (A-Z): ");
+            //    char row = char.Parse(Console.ReadLine());
+
+            //    Console.Write("Seat Number: ");
+            //    int number = int.Parse(Console.ReadLine());
+
+            //    Console.Write("Price: ");
+            //    double price = double.Parse(Console.ReadLine());
+
+            //    SeatLocation seat = new SeatLocation { Row = row, Number = number };
+
+            //    Ticket ticket = new Ticket(movieName, type, seat, price);
+
+            //    cinema.AddTicket(ticket);
+            //}
+
+            //Console.WriteLine("\n========== All Tickets ==========");
+
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    var t = cinema[i];
+            //    if (t != null)
+            //    {
+            //        Console.WriteLine(
+            //            $"Ticket #{t.TicketId} | {t.MovieName} | {t.Type} | Seat: {t.Seat} | Price: {t.Price} EGP | After Tax: {t.PriceAfterTax} EGP");
+            //    }
+            //}
+
+            //Console.WriteLine("\n========== Search by Movie ==========");
+            //Console.Write("Enter movie name to search: ");
+            //string search = Console.ReadLine();
+
+            //var found = cinema.GetMovie(search);
+
+            //if (found != null)
+            //{
+            //    Console.WriteLine(
+            //        $"Found: Ticket #{found.TicketId} | {found.MovieName} | {found.Type} | Seat: {found.Seat} | Price: {found.Price} EGP");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Movie not found.");
+            //}
+
+            //Console.WriteLine("\n========== Statistics ==========");
+            //Console.WriteLine($"Total Tickets Sold: {Ticket.GetTotalTicketsSold()}");
+
+            //Console.WriteLine($"\nBooking Reference 1: {BookingHelper.GenerateBookingReference()}");
+            //Console.WriteLine($"Booking Reference 2: {BookingHelper.GenerateBookingReference()}");
+
+            //double discount = BookingHelper.CalcGroupDiscount(5, 80);
+            //Console.WriteLine($"\nGroup Discount (5 tickets x 80 EGP): {discount} EGP");
+            #endregion
+        }
     }
 }
